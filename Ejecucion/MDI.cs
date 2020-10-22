@@ -107,5 +107,59 @@ namespace Ejecucion
                 MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
             }
         }
+
+        private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (seguridad.PermisosAcceso("2", txtUsuario.Text) == 1)
+            {
+                bit.user(txtUsuario.Text);
+                frmMantenimientoUsuario mantenimientoUsuario = new frmMantenimientoUsuario(txtUsuario.Text);
+                mantenimientoUsuario.MdiParent = this;
+                mantenimientoUsuario.Show();
+            }
+            else
+            {
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
+        }
+
+        private void aplicacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (seguridad.PermisosAcceso("3", txtUsuario.Text) == 1)
+            {
+                bit.user(txtUsuario.Text);
+                frmAplicativo aplicativo = new frmAplicativo();
+                aplicativo.MdiParent = this;
+                aplicativo.Show();
+            }
+            else
+            {
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
+        }
+
+        private void moduloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (seguridad.PermisosAcceso("8", txtUsuario.Text) == 1)
+            {
+                bit.user(txtUsuario.Text);
+                frmModulo modulo = new frmModulo(txtUsuario.Text);
+                modulo.MdiParent = this;
+                modulo.Show();
+            }
+            else
+            {
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLogin frm = new frmLogin();
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                txtUsuario.Text = frm.usuario();
+            }
+        }
     }
 }

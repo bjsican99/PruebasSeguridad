@@ -33,11 +33,15 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aplicacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.moduloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.perfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientoPerfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.asignacionDeAplicacionAPerfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.asiganacionDeAplicacionesAUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,11 +66,36 @@
             // seguridadToolStripMenuItem
             // 
             this.seguridadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.usuarioToolStripMenuItem,
+            this.aplicacionesToolStripMenuItem,
+            this.moduloToolStripMenuItem,
             this.perfilToolStripMenuItem,
-            this.asiganacionDeAplicacionesAUsuarioToolStripMenuItem});
+            this.asiganacionDeAplicacionesAUsuarioToolStripMenuItem,
+            this.salirToolStripMenuItem});
             this.seguridadToolStripMenuItem.Name = "seguridadToolStripMenuItem";
             this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
             this.seguridadToolStripMenuItem.Text = "Seguridad";
+            // 
+            // usuarioToolStripMenuItem
+            // 
+            this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(283, 22);
+            this.usuarioToolStripMenuItem.Text = "0002-Usuario";
+            this.usuarioToolStripMenuItem.Click += new System.EventHandler(this.usuarioToolStripMenuItem_Click);
+            // 
+            // aplicacionesToolStripMenuItem
+            // 
+            this.aplicacionesToolStripMenuItem.Name = "aplicacionesToolStripMenuItem";
+            this.aplicacionesToolStripMenuItem.Size = new System.Drawing.Size(283, 22);
+            this.aplicacionesToolStripMenuItem.Text = "0003-Aplicaciones";
+            this.aplicacionesToolStripMenuItem.Click += new System.EventHandler(this.aplicacionesToolStripMenuItem_Click);
+            // 
+            // moduloToolStripMenuItem
+            // 
+            this.moduloToolStripMenuItem.Name = "moduloToolStripMenuItem";
+            this.moduloToolStripMenuItem.Size = new System.Drawing.Size(283, 22);
+            this.moduloToolStripMenuItem.Text = "0008-Modulo";
+            this.moduloToolStripMenuItem.Click += new System.EventHandler(this.moduloToolStripMenuItem_Click);
             // 
             // perfilToolStripMenuItem
             // 
@@ -74,22 +103,36 @@
             this.mantenimientoPerfilToolStripMenuItem,
             this.asignacionDeAplicacionAPerfilToolStripMenuItem});
             this.perfilToolStripMenuItem.Name = "perfilToolStripMenuItem";
-            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(283, 22);
             this.perfilToolStripMenuItem.Text = "Perfil";
             // 
             // mantenimientoPerfilToolStripMenuItem
             // 
             this.mantenimientoPerfilToolStripMenuItem.Name = "mantenimientoPerfilToolStripMenuItem";
-            this.mantenimientoPerfilToolStripMenuItem.Size = new System.Drawing.Size(245, 22);
-            this.mantenimientoPerfilToolStripMenuItem.Text = "Mantenimiento perfil";
+            this.mantenimientoPerfilToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
+            this.mantenimientoPerfilToolStripMenuItem.Text = "0004-Mantenimiento perfil";
             this.mantenimientoPerfilToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoPerfilToolStripMenuItem_Click);
             // 
             // asignacionDeAplicacionAPerfilToolStripMenuItem
             // 
             this.asignacionDeAplicacionAPerfilToolStripMenuItem.Name = "asignacionDeAplicacionAPerfilToolStripMenuItem";
-            this.asignacionDeAplicacionAPerfilToolStripMenuItem.Size = new System.Drawing.Size(245, 22);
-            this.asignacionDeAplicacionAPerfilToolStripMenuItem.Text = "Asignacion de aplicacion a perfil";
+            this.asignacionDeAplicacionAPerfilToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
+            this.asignacionDeAplicacionAPerfilToolStripMenuItem.Text = "0005-Asignacion de aplicacion a perfil";
             this.asignacionDeAplicacionAPerfilToolStripMenuItem.Click += new System.EventHandler(this.asignacionDeAplicacionAPerfilToolStripMenuItem_Click);
+            // 
+            // asiganacionDeAplicacionesAUsuarioToolStripMenuItem
+            // 
+            this.asiganacionDeAplicacionesAUsuarioToolStripMenuItem.Name = "asiganacionDeAplicacionesAUsuarioToolStripMenuItem";
+            this.asiganacionDeAplicacionesAUsuarioToolStripMenuItem.Size = new System.Drawing.Size(283, 22);
+            this.asiganacionDeAplicacionesAUsuarioToolStripMenuItem.Text = "0006-asignacion de perfil y aplicaciones";
+            this.asiganacionDeAplicacionesAUsuarioToolStripMenuItem.Click += new System.EventHandler(this.asiganacionDeAplicacionesAUsuarioToolStripMenuItem_Click);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(283, 22);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // txtUsuario
             // 
@@ -97,13 +140,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(100, 20);
             this.txtUsuario.TabIndex = 5;
-            // 
-            // asiganacionDeAplicacionesAUsuarioToolStripMenuItem
-            // 
-            this.asiganacionDeAplicacionesAUsuarioToolStripMenuItem.Name = "asiganacionDeAplicacionesAUsuarioToolStripMenuItem";
-            this.asiganacionDeAplicacionesAUsuarioToolStripMenuItem.Size = new System.Drawing.Size(254, 22);
-            this.asiganacionDeAplicacionesAUsuarioToolStripMenuItem.Text = "asignacion de perfil y aplicaciones";
-            this.asiganacionDeAplicacionesAUsuarioToolStripMenuItem.Click += new System.EventHandler(this.asiganacionDeAplicacionesAUsuarioToolStripMenuItem_Click);
+            this.txtUsuario.Visible = false;
             // 
             // MDI
             // 
@@ -135,6 +172,10 @@
         private System.Windows.Forms.ToolStripMenuItem asignacionDeAplicacionAPerfilToolStripMenuItem;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.ToolStripMenuItem asiganacionDeAplicacionesAUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aplicacionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem moduloToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
     }
 }
 
