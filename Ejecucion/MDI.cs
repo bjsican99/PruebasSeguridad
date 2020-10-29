@@ -161,5 +161,12 @@ namespace Ejecucion
                 txtUsuario.Text = frm.usuario();
             }
         }
+
+        private void cambioContraseñaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCambioContraseña cambioContraseña = new frmCambioContraseña(txtUsuario.Text);
+            cambioContraseña.MdiParent = this;
+            cambioContraseña.Show();
+        }
     }
 }
